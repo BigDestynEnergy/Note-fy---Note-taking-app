@@ -1,0 +1,5 @@
+
+.page{
+    animation: var(--animate-down);
+    margin-top: 72px;
+}

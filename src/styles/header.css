@@ -1,0 +1,44 @@
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: var(--radius-lg);
+    box-shadow: var(--cast) var(--color-surface);
+    background: var(--color-background);
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .buttons{
+    display: flex;
+    gap: .4rem;
+}
+
+header h1{
+    cursor: pointer;
+    background: var(--color-accent);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header .buttons button{
+    padding: var(--radius-md);
+    border-radius: var(--radius-xl);
+    border: 2px solid transparent;
+    color: var(--color-background);
+}
+
+header .buttons button:first-child{
+    background: var(--color-accent);
+}
+
+header .buttons button:first-child:hover{
+    background: var(--color-accent-solid);
+}
+
+header .buttons button:last-child{
+    background: var(--color-surface);
+}

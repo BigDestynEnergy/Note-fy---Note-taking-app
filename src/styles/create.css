@@ -1,0 +1,79 @@
+
+.create{
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    background: transparent;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: var(--animate-down);
+    background: var(--color-background);
+    box-shadow: var(--cast-strong);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    position: relative;
+    border: 1px solid var(--color-text-3);
+    width: 400px;
+}
+
+.create form .group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.group input, .group textarea{
+    padding: var(--radius-lg);
+    border: 1px solid var(--color-text-3);
+    width: 100%;
+    border-radius: var(--radius-md);
+}
+
+.group textarea{
+    min-height: 150px;
+}
+
+.create form .close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.group input:focus, .group textarea:focus{
+    border-color: var(--color-purple);
+}
+
+.create form button{
+    padding: var(--radius-lg);
+    width: 100%;
+    margin-top: .4rem;
+    color: var(--color-background);
+    border: 2px solid transparent;
+    background: var(--color-purple);
+    border-radius: var(--radius-lg);
+}
+
+.create form button:hover{
+    background: var(--color-purple-solid);
+}
+
+.create form span{
+    margin-top: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.create form span:hover{
+    color: var(--color-purple);
+}

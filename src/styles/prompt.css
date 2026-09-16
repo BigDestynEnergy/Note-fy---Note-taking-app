@@ -1,0 +1,49 @@
+.prompt-overlay{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--rgba);
+    backdrop-filter: blur(var(--radius-sm));
+}
+
+.prompt-overlay .card{
+    background: var(--color-background);
+    color: var(--color-text);
+    box-shadow: var(--cast) var(--color-surface);
+    padding: var(--radius-xxl);
+    border-radius: var(--radius-lg);
+    animation: var(--animate-down);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.prompt-overlay .card .buttons{
+    display: flex;
+    flex-direction: column;
+    gap: var(--radius-sm);
+    align-items: center;
+}
+
+.prompt-overlay .card .buttons button{
+    padding: var(--radius-md);
+    border-radius: var(--radius-xl);
+    border: 2px solid transparent;
+    color: var(--color-background);
+    width: 80%;
+}
+
+.prompt-overlay .card .buttons button:first-child{
+    background: var(--color-text);
+}
+
+.prompt-overlay .card .buttons button:active{
+    transform: scale(1.1);
+}
+
+.prompt-overlay .card .buttons button:last-child{
+    background: var(--color-text-soft);
+}
