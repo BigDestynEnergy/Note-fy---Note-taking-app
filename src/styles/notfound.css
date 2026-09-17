@@ -1,0 +1,21 @@
+.not-found{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    flex-direction: column;
+}
+
+.not-found span{
+    font-size: .85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.not-found span:hover{
+    transform: scale(1.01);
+    color: #18ce;
+}

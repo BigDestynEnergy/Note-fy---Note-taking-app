@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import PromptComponent from "../Components/Prompt";
+import PromptComponent from "../components/Prompt";
 
 const Prompt = createContext();
 
