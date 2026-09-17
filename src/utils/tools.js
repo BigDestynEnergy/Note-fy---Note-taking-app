@@ -15,4 +15,15 @@ const getFullDate = () => {
     return `${day}/${month}/${year}`
 }
 
-export {getFullDate, getDay}
+const getTimeOfDay = () => {
+    const date = new Date();
+
+    const time = date.toLocaleTimeString("en-US", {
+        minute:"2-digit",
+        hour:"2-digit"
+    })
+
+    return time;
+}
+
+export {getFullDate, getDay, getTimeOfDay}

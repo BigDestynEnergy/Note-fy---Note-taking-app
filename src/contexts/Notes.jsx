@@ -40,6 +40,7 @@ export const NotesProvider = ({ children }) => {
                           name: updatedNote.name,
                           content: updatedNote.content,
                           is_edited: true,
+                          time: updatedNote.time
                       }
                     : note
             );

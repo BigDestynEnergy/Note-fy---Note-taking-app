@@ -6,6 +6,7 @@ import Application from "./routes/Application"
 import { NotesProvider } from "./contexts/Notes"
 import { CreateProvider } from "./contexts/Create Context"
 import { BookmarkProvider } from "./contexts/Bookmarks"
+import { EditsProvider } from "./contexts/Edit Context"
 
 export default function App(){
   return(
@@ -16,7 +17,9 @@ export default function App(){
       <PromptProvider>
         <CreateProvider>
           <BookmarkProvider>
+        <EditsProvider>
          <Application/>
+        </EditsProvider>
          </BookmarkProvider>
          </CreateProvider>
       </PromptProvider>

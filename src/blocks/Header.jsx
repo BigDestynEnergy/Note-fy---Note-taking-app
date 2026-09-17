@@ -2,6 +2,7 @@ import { useCreate } from "../contexts/Create Context"
 import { useNotes } from "../contexts/Notes";
 import { usePrompter } from "../contexts/Prompt Context"
 import "../styles/header.css"
+import { getTimeOfDay } from "../utils/tools";
 
 export default function Header(){
     const {setIsOpen} = useCreate();

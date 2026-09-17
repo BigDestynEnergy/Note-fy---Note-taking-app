@@ -6,6 +6,7 @@ import { LuBookmark, LuBookmarkCheck, LuPencil, LuTrash } from "react-icons/lu";
 import { usePopup } from "../contexts/Popup Context";
 import { usePrompter } from "../contexts/Prompt Context";
 import { useBookmarks } from "../contexts/Bookmarks";
+import { useEditor } from "../contexts/Edit Context";
 
 export default function NotesPage(){
     const [contextMenu, setContextMenu] = useState(null);
@@ -13,6 +14,7 @@ export default function NotesPage(){
     const {notes, removeNote, renderBookmark} = useNotes();
     const { notify } = usePopup();
     const {marked} = useBookmarks();
+    const {openEditor} = useEditor();
     const {openPrompt} = usePrompter();
     const {addToBookmarks, itemExists, removeFromBookmarks} = useBookmarks();
 
@@ -37,7 +39,7 @@ export default function NotesPage(){
    const manageButtons = (name, id, note) => {
     switch(name){
         case "Edit":
-            notify(2, "Edits coming soon")
+            openEditor(note);
             break
         case "Bookmark":
             itemExists(id) ? removeFromBookmarks(id) : addToBookmarks(note)
@@ -88,7 +90,7 @@ export default function NotesPage(){
                 key={note.id}>
                     <h2>{note.name}</h2>
                     <p>{note.content}</p>
-                    <small>{note.time} {note.is_edited && (<small>- edited</small>)}</small>
+                    <small>{note.is_edited ? (<small>Edited at {note.time}</small>) : note.time}</small>
 
                     <div className="bookmark-icon"
                     title={itemExists(note.id) ? "Bookmarked" : "Bookmark"}
